@@ -1,17 +1,22 @@
 <script lang="ts">
-    import '../app.css';
-    let { children } = $props();
+  import '../app.css';
+  let { children } = $props();
 </script>
 
 <main>
+  <section class="stage">
     {@render children()}
+  </section>
 </main>
 
 <style>
-    main {
-        display: flex;
-        min-height: 100vh;
-        align-items: center;
-        justify-content: center;
-    }
+  main {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+  .stage {
+    width: 100%;
+    padding: 1.5rem 1rem;
+  }
 </style>
